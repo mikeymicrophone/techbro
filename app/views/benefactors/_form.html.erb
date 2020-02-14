@@ -1,0 +1,22 @@
+<%= form_with(model: benefactor, local: true) do |form| %>
+  <% if benefactor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(benefactor.errors.count, "error") %> prohibited this benefactor from being saved:</h2>
+
+      <ul>
+        <% benefactor.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :moniker %>
+    <%= form.text_field :moniker %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

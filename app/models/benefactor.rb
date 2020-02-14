@@ -1,0 +1,2 @@
+class Benefactor < ApplicationRecord
+end

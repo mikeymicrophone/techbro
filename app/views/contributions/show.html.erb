@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Expression:</strong>
+  <%= @contribution.expression %>
+</p>
+
+<p>
+  <strong>Benefactor:</strong>
+  <%= @contribution.benefactor_id %>
+</p>
+
+<%= link_to 'Edit', edit_contribution_path(@contribution) %> |
+<%= link_to 'Back', contributions_path %>

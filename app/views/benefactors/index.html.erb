@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Benefactors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Moniker</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @benefactors.each do |benefactor| %>
+      <tr>
+        <td><%= benefactor.moniker %></td>
+        <td><%= link_to 'Show', benefactor %></td>
+        <td><%= link_to 'Edit', edit_benefactor_path(benefactor) %></td>
+        <td><%= link_to 'Destroy', benefactor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Benefactor', new_benefactor_path %>
